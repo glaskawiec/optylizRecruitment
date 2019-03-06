@@ -1,7 +1,7 @@
 ##  :raising_hand: Introduction
 This repository was created for recruitment task for the  JavaScript Developer job at Optyliz.
-Main objective is implement with react and styled components a layout and animations should looks exactly like in the movie:
-https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1BJunYYIvEY3R7W2ZL-izopsPvjxWwmPv%2Ftype-nav-tap.mp4
+Main objective is implement with react and styled components a layout and animations should looks exactly like in [the movie](https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1BJunYYIvEY3R7W2ZL-izopsPvjxWwmPv%2Ftype-nav-tap.mp4)
+
 
 ## :bookmark_tabs: Requirements
 
