@@ -1,7 +1,12 @@
 ##  :raising_hand: Introduction
-This repository was created for recruitment task for the  JavaScript Developer job at Optyliz.  
-Main objective is implement with react and styled components a layout and animations should looks  
-exactly like in [the movie](https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1BJunYYIvEY3R7W2ZL-izopsPvjxWwmPv%2Ftype-nav-tap.mp4).
+This repository was created for recruitment at Optyliz. I'm applying  for the React Developer full-time job.  
+Main objective is implement with React and Styled Components simple blog app.  
+Layout and animations should looks
+exactly like in [the video](https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1BJunYYIvEY3R7W2ZL-izopsPvjxWwmPv%2Ftype-nav-tap.mp4).
+
+##  :warning: Warning
+After changing the browser's resolution from desktop to mobile the application  
+should be refreshed to be sure that all animations work correctly.
 
 
 ## :bookmark_tabs: Requirements
@@ -19,8 +24,13 @@ exactly like in [the movie](https://storage.googleapis.com/spec-host-backup/mio-
 *  [NPM](https://www.npmjs.com/) installed
 
 ## :hammer: Installation
-
-
+Open you fav terminal and type:
+```
+git clone https://github.com/glaskawiec/optylizRecruitment.git
+cd optylizRecruitment
+npm install
+npm start
+```
 ---
 
 ##### glaskawiec © 2019 - MIT license
