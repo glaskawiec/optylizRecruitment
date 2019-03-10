@@ -1,6 +1,6 @@
 ##  :raising_hand: Introduction
 This repository was created for recruitment at Optyliz. I'm applying  for the React Developer full-time job.  
-Main objective is implement with React and Styled Components simple blog web application. Layout and animations should looks  
+Main objective is implement with React and Styled Components simple blog web application.  Layout and animations should looks
 exactly like in [the movie](https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1BJunYYIvEY3R7W2ZL-izopsPvjxWwmPv%2Ftype-nav-tap.mp4).
 
 
