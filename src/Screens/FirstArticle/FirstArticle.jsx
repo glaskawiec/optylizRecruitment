@@ -23,16 +23,18 @@ const FirstArticle = () => {
       <Col
         style={{ padding: isMobile ? 0 : 15 }}
         md={4}
+        sm={4}
       >
         <ZoomImg
           imageWidth="100%"
-          imageHeight="100vw"
+          imageHeight={isMobile ? '100vw' : '100%'}
           src="https://picsum.photos/525?image=110"
         />
       </Col>
       <Col
         style={{ zIndex: -1 }}
         md={8}
+        sm={8}
       >
         <Category>{firstCategory}</Category>
         <Title>{firstTitle}</Title>
