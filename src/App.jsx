@@ -4,7 +4,7 @@ import Index from './Screens/Index/Index';
 import FirstArticle from './Screens/FirstArticle/FirstArticle';
 import Layout from './Layout/Layout';
 
-const initialIsMobile = window.innerWidth <= 375;
+const initialIsMobile = window.innerWidth <= 576;
 export const isMobileContext = React.createContext(initialIsMobile);
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     window.addEventListener('resize', (event) => {
       const windowWidth = event.currentTarget.innerWidth;
-      const isCurrentlyMobile = windowWidth <= 375;
+      const isCurrentlyMobile = windowWidth <= 576;
       setIsMobile(isCurrentlyMobile);
     });
   });

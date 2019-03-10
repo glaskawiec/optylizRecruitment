@@ -6,7 +6,7 @@ const Image = posed.img({
     position: 'static',
     width: props => (props.isMobile ? '100vw' : 'auto'),
     height: 'auto',
-    scaleX: props => (props.isMobile ? 1.4 : 1),
+    scaleX: props => (props.isMobile ? 1.6 : 1),
     originX: 50,
     transition: {
       duration: 400,

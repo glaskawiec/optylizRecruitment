@@ -48,7 +48,7 @@ const ZoomImage = (props) => {
 
 ZoomImage.propTypes = {
   imageWidth: PropTypes.string.isRequired,
-  imageHeight: PropTypes.number.isRequired,
+  imageHeight: PropTypes.string.isRequired,
 };
 
 export default ZoomImage;

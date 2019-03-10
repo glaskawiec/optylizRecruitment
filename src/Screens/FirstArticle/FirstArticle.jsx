@@ -26,8 +26,8 @@ const FirstArticle = () => {
       >
         <ZoomImg
           imageWidth="100%"
-          imageHeight={375}
-          src="https://picsum.photos/300?image=100"
+          imageHeight="100vw"
+          src="https://picsum.photos/525?image=110"
         />
       </Col>
       <Col
