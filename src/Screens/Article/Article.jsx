@@ -1,22 +1,26 @@
 import React, { useContext } from 'react';
+import ReactRouterPropTypes from 'react-router-prop-types';
 import { Col, Row } from 'react-bootstrap';
-import {
-  category as firstCategory,
-  text as firstText,
-  title as firstTitle,
-} from '../../resources/text/firstArticle';
 import Category from '../Index/Article/Category';
 import Title from './Title';
 import Text from './Text';
-import avatarSrc from '../../resources/images/avatar.jpg';
 import Avatar from './AuthorSection/Avatar';
 import AuthorName from './AuthorSection/AuthorName';
 import By from './AuthorSection/By';
 import ZoomImg from './ZoomImage/ZoomImage';
 import AuthorSection from './AuthorSection/AuthorSection';
 import { isMobileContext } from '../../App';
+import mock from '../../resources/text/mock.json';
 
-const FirstArticle = () => {
+
+const Article = (location) => {
+  const getArticleData = () => mock.articles[location.match.params.name];
+
+  const {
+    category, title, text, author, imgSrc, avatarSrc,
+  } = getArticleData();
+
+
   const isMobile = useContext(isMobileContext);
   return (
     <Row className="row">
@@ -28,7 +32,7 @@ const FirstArticle = () => {
         <ZoomImg
           imageWidth="100%"
           imageHeight={isMobile ? '100vw' : '100%'}
-          src="https://picsum.photos/525?image=110"
+          src={imgSrc}
         />
       </Col>
       <Col
@@ -36,20 +40,27 @@ const FirstArticle = () => {
         md={8}
         sm={8}
       >
-        <Category>{firstCategory}</Category>
-        <Title>{firstTitle}</Title>
-        <Text>{firstText}</Text>
+        <Category>{category}</Category>
+        <Title>{title}</Title>
+        <Text>{text}</Text>
         <AuthorSection>
           <Avatar
             src={avatarSrc}
             alt="avatar"
           />
           <By />
-          <AuthorName> Betty Eghan</AuthorName>
+          <AuthorName>
+            {' '}
+            {author}
+          </AuthorName>
         </AuthorSection>
       </Col>
     </Row>
   );
 };
 
-export default FirstArticle;
+Article.propTypes = {
+  location: ReactRouterPropTypes.location.isRequired,
+};
+
+export default Article;

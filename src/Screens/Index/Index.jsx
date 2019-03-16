@@ -1,30 +1,13 @@
 import React from 'react';
-import {
-  category as firstCategory,
-  imgSrc as fistImgSrc,
-  text as firstText,
-  title as firstTitle,
-  url as firstUrl,
-} from '../../resources/text/firstArticle';
-import {
-  category as secondCategory,
-  imgSrc as secondImgSrc,
-  text as secondText,
-  title as secondTitle,
-  url as secondUrl,
-} from '../../resources/text/secondArticle';
-import {
-  category as thirdCategory,
-  imgSrc as thirdImgSrc,
-  text as thirdText,
-  title as thirdTitle,
-  url as thirdUrl,
-} from '../../resources/text/thirdArticle';
 import Post from './Article/Article';
 import Tag from './Tags/Tag';
 import Tags from './Tags/Tags';
 
-const tags = ['TechDesign', 'Healthcare Revolution', 'Future'];
+const tags = [
+  'TechDesign',
+  'Healthcare Revolution',
+  'Future',
+];
 
 const Index = () => (
   <>
@@ -35,25 +18,13 @@ const Index = () => (
     </Tags>
     <Post
       isFirst
-      category={firstCategory}
-      title={firstTitle}
-      text={firstText}
-      imgSrc={fistImgSrc}
-      url={firstUrl}
+      id="poverty-to-empowerment-in-chicago"
     />
     <Post
-      category={secondCategory}
-      title={secondTitle}
-      text={secondText}
-      imgSrc={secondImgSrc}
-      url={secondUrl}
+      id="divided-american-lives-during-war"
     />
     <Post
-      category={thirdCategory}
-      title={thirdTitle}
-      text={thirdText}
-      imgSrc={thirdImgSrc}
-      url={thirdUrl}
+      id="the-future-of-gasoline"
     />
   </>
 );

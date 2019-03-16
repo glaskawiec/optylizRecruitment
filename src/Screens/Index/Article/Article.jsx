@@ -9,17 +9,18 @@ import Text from './Text';
 import ArticleWrapper from './ArticleWrapper';
 import Image from './Image';
 import { isMobileContext } from '../../../App';
+import mock from '../../../resources/text/mock.json';
 
 const Article = ({
-  category,
-  title,
-  text,
-  imgSrc,
+  id,
   isFirst,
-  url,
   history,
 }) => {
   const isMobile = useContext(isMobileContext);
+  const getArticleData = () => mock.articles[id];
+  const {
+    category, title, text, imgSrc,
+  } = getArticleData();
 
   const ArticleImage = (
     <Col
@@ -47,7 +48,7 @@ const Article = ({
   );
 
   const onClick = () => {
-    history.push({ pathname: `/${url}` });
+    history.push({ pathname: `/article/${id}` });
   };
   let content;
 
@@ -79,11 +80,7 @@ const Article = ({
 };
 
 Article.propTypes = {
-  category: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  imgSrc: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   isFirst: PropTypes.bool,
   history: ReactRouterPropTypes.history.isRequired,
 };
