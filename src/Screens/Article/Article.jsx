@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import ReactRouterPropTypes from 'react-router-prop-types';
-import { Col, Row } from 'react-bootstrap';
 import Category from '../Index/Article/Category';
 import Title from './Title';
 import Text from './Text';
@@ -11,7 +10,9 @@ import ZoomImg from './ZoomImage/ZoomImage';
 import AuthorSection from './AuthorSection/AuthorSection';
 import { isMobileContext } from '../../App';
 import mock from '../../resources/text/mock.json';
-
+import Row from '../../Layout/Row';
+import ArticleImage from './ArticleImage';
+import ArticleInfo from './ArticleInfo';
 
 const Article = (location) => {
   const getArticleData = () => mock.articles[location.match.params.name];
@@ -20,26 +21,19 @@ const Article = (location) => {
     category, title, text, author, imgSrc, avatarSrc,
   } = getArticleData();
 
-
   const isMobile = useContext(isMobileContext);
   return (
-    <Row className="row">
-      <Col
-        style={{ padding: isMobile ? 0 : 15 }}
-        md={4}
-        sm={4}
+    <Row>
+      <ArticleImage
+        isMobile={isMobile}
       >
         <ZoomImg
           imageWidth="100%"
           imageHeight={isMobile ? '100vw' : '100%'}
           src={imgSrc}
         />
-      </Col>
-      <Col
-        style={{ zIndex: -1 }}
-        md={8}
-        sm={8}
-      >
+      </ArticleImage>
+      <ArticleInfo>
         <Category>{category}</Category>
         <Title>{title}</Title>
         <Text>{text}</Text>
@@ -54,7 +48,7 @@ const Article = (location) => {
             {author}
           </AuthorName>
         </AuthorSection>
-      </Col>
+      </ArticleInfo>
     </Row>
   );
 };
