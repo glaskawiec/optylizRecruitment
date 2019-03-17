@@ -16,7 +16,10 @@ should be refreshed to be sure that all animations work correctly.
 ## :bookmark_tabs: Requirements
 
 *  Use React and Styled Components
-*  Spend max 4 hours
+*  Do not use Bootstrap
+*  Use dynamic routing
+*  Create a fully functional menu
+*  Spend max 6 hours
 *  Push code to Github
 *  Use PropType checking
 *  Use only some general package for animation like e.g. react-pose, react-transition-group, etc.
