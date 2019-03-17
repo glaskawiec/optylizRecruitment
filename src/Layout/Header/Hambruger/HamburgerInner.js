@@ -30,7 +30,7 @@ const HamburgerInner = styled.div`
     transition-timing-function: ease;
     }
     
-    ${props => (props.isActive ? `
+    ${props => (props.showArrow ? `
     &::before {
       -webkit-transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);
       transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);
@@ -47,6 +47,30 @@ const HamburgerInner = styled.div`
     }`
     : '')
 }    
+    
+        ${props => (props.showCross ? `
+
+    &::before {
+          top: 0;
+    transition: top .1s ease-out,opacity .1s ease-out .12s;
+    opacity: 0;
+    }
+
+     &::after {
+      bottom: 0;
+    transition: bottom .1s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;
+    transform: rotate(-90deg);
+    }
+    
+    & {
+    transition-delay: .12s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    transform: rotate(225deg);
+    }`
+    : '')
+} 
+    
+    
 `;
 
 export default HamburgerInner;

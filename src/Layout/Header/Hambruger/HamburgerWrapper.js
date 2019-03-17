@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const HamburgerWrapper = styled.div`
+  z-index: 1;
     padding: 0;
     margin-top: 5px;
     display: inline-block;
