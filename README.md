@@ -4,6 +4,10 @@ Main objective is implement with React and Styled Components simple blog app.
 Layout and animations should looks
 exactly like in [the video](https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1BJunYYIvEY3R7W2ZL-izopsPvjxWwmPv%2Ftype-nav-tap.mp4).
 
+## :rainbow: Mobile showcase
+
+![alt text](https://media.giphy.com/media/1wPlE1NLs5iKhVlWlh/giphy.gif "showCase")
+
 ##  :warning: Warning
 After changing the browser's resolution from desktop to mobile the application  
 should be refreshed to be sure that all animations work correctly.
